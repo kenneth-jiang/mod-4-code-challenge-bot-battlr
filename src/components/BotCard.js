@@ -22,8 +22,9 @@ const BotCard = props => {
   return (
     <div
       className="ui card"
-      key={props.bot.id}
-      onClick={() => console.log("add code to connect event listener")}
+      key={bot.id}
+      // onClick={props.handleClick ? () => props.handleClick(bot.id) : null}
+      onClick={() => props.renderSpecs(bot.id)}
     >
       <div className="image">
         <img alt="oh no!" src={props.bot.avatar_url} />
